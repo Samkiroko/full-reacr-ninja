@@ -1,12 +1,12 @@
-import Home from './Home'
-import Navbar from './Navbar'
+import './App.css'
 
 function App() {
+  const title = 'Welcome to the new blog'
+
   return (
     <div className='App'>
-      <Navbar />
       <div className='content'>
-        <Home />
+        <h1>{title}</h1>
       </div>
     </div>
   )
