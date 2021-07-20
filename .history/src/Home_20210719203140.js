@@ -12,16 +12,10 @@ const Home = () => {
       })
       .then((data) => {
         setBlogs(data)
-        setLoading(false)
       })
   }, [])
 
-  return (
-    <div className='home'>
-      {loading && <div className='loading'>Loading...</div>}
-      {blogs && <BlogList blogs={blogs} title='All Blogs' />}
-    </div>
-  )
+  return <div className='home'>{blogs && <BlogList blogs={blogs} title='All Blogs' />}</div>
 }
 
 export default Home
