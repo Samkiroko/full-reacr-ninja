@@ -4,13 +4,10 @@ const Create = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [author, setAuthor] = useState('mario')
-
-  const handleSubmit = (e) => {}
-
   return (
     <div className='create'>
       <h2>add a New blog</h2>
-      <form onSubmit={handleSubmit}>
+      <form action=''>
         <label>Blog title:</label>
         <input type='text' required value={title} onChange={(e) => setTitle(e.target.value)} />
         <label>Blog body</label>
