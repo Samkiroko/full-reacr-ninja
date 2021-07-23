@@ -1,12 +1,10 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router'
 
 const Create = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [author, setAuthor] = useState('mario')
   const [isPending, setIsPending] = useState(false)
-  const history = useHistory()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -20,8 +18,6 @@ const Create = () => {
       setTitle('')
       setBody('')
       setAuthor('mario')
-      setIsPending(false)
-      history.push('/')
     })
   }
 
@@ -39,11 +35,7 @@ const Create = () => {
           <option value='yoshi'>yoshi</option>
         </select>
         {!isPending && <button>add blog</button>}
-        {isPending && (
-          <button className='create__add' disabled>
-            adding blog...
-          </button>
-        )}
+        {isPending && <button disabled>adding blog...</button>}
       </form>
     </div>
   )

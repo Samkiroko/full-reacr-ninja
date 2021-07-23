@@ -21,7 +21,6 @@ const Create = () => {
       setBody('')
       setAuthor('mario')
       setIsPending(false)
-      history.push('/')
     })
   }
 
