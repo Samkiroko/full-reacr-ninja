@@ -8,12 +8,8 @@ const Create = () => {
         <label>Blog body</label>
         <textarea required></textarea>
         <label>Blog author</label>
-        <select>
-          <option value='mario'></option>
-          <option value='yoshi'></option>
-        </select>
-
-        <button>add blog</button>
+        <select value='mario'></select>
+        <select value='yoshi'></select>
       </form>
     </div>
   )
